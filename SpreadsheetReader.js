@@ -97,7 +97,7 @@
   
         row.forEach(function (cell, cellIndex) {
           let objectKey = sheetData[indexOfHeader][cellIndex].toString().toLowerCase().replace(/\s/g, '_')
-          rowAsObject[objectKey] = cell
+          cell instanceof Date ? rowAsObject[`${objectKey}_datetime`] = cell.toISOString() : rowAsObject[objectKey] = cell
         })
   
         dataAsJson.push(rowAsObject)
