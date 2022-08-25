@@ -23,9 +23,9 @@
      * @param {string} sheetName Sheet name to be read.
      * @param {string} [spreadsheetId] Google Sheet File ID or the active spreadsheet.
      */
-    constructor(sheetName, spreadsheetId = SpradsheetApp.getActiveSpreadsheet()) {
-      this.spreadsheetId = SpreadsheetApp.openById(spreadsheetId)
-      this.sheetByName = this.spreadsheetId.getSheetByName(sheetName)
+    constructor(sheetName, spreadsheetId = SpreadsheetApp.getActiveSpreadsheet().getId()) {
+      this.spreadsheetById = SpreadsheetApp.openById(spreadsheetId)
+      this.sheetByName = this.spreadsheetById.getSheetByName(sheetName)
     }
   
   
@@ -42,7 +42,7 @@
      * @see https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#openbyidid
      */
     spreadsheet() {
-      return this.spreadsheetId
+      return this.spreadsheetById
     }
   
   
@@ -96,7 +96,7 @@
         let rowAsObject = new Object()
   
         row.forEach(function (cell, cellIndex) {
-          let objectKey = sheetData[indexOfHeader][cellIndex]
+          let objectKey = sheetData[indexOfHeader][cellIndex].toString().toLowerCase().replace(/\s/g, '_')
           rowAsObject[objectKey] = cell
         })
   
