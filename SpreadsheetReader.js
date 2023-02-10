@@ -28,41 +28,6 @@
       this.sheetByName = this.spreadsheetById.getSheetByName(sheetName)
     }
   
-  
-    /**
-     * The `spreadsheet` method returns the spreadsheet file opened by `spreadsheetId`.
-     * 
-     * It is the same thing when you runs:
-     * ```
-     * SpreadsheetApp.openById(id)
-     * ```
-     * 
-     * @function spreadsheet
-     * @returns {SpreadsheetApp.Spreadsheet} Return of the openById(id) method.
-     * @see https://developers.google.com/apps-script/reference/spreadsheet/spreadsheet-app#openbyidid
-     */
-    spreadsheet() {
-      return this.spreadsheetById
-    }
-  
-  
-    /**
-     * The `sheet` method returns the Class Sheet from a sheet opened by name.
-     * 
-     * It is the same thing when you runs:
-     * ```
-     * SpreadsheetApp.openById(id).getSheetByName(name)
-     * ```
-     * 
-     * @function sheet
-     * @returns {SpreadsheetApp.Sheet} Return of the getSheetByName(name) method.
-     * @see https://developers.google.com/apps-script/reference/spreadsheet/sheet
-     */
-    sheet() {
-      return this.sheetByName
-    }
-  
-  
     /**
      * The `sheetDataAsJson` method transforms a table from a given sheet into
      * a beautiful JSON valid object. It's normal to get emotional after running it.
