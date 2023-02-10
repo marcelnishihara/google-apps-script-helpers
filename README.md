@@ -11,8 +11,6 @@ It is a compilation of classes, functions, and tips to help developers' routines
     - `sheetByName`: Sheet name to be read;
     - `spreadsheetId`: Google Sheet File ID or the active spreadsheet.
   - Methods:
-    - `spreadsheet`: The `spreadsheet` method returns the spreadsheet file opened by `spreadsheetId`;
-    - `sheet`: The `sheet` method returns the Class Sheet from a sheet opened by name;
     - `sheetDataAsJson`: The `sheetDataAsJson` method transforms a table from a given sheet into a beautiful JSON valid object. It's normal to get emotional after running it.
   - How to Use It:
     ```js
