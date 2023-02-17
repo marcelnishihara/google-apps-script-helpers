@@ -11,7 +11,7 @@ class GoogleAppsScript {
      * 
      * @class GoogleAppsScript
      */
-    
+
     constructor() {
 
     }
