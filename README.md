@@ -12,18 +12,18 @@ It is a compilation of classes, functions, and tips to help developers' routines
     - `spreadsheetById`: Return of the method `SpreadsheetApp.openById({spreadsheetId})`.
     - `sheetByName`: Sheet name to be read;
     - `dataAsJson`: Property that will recieve data in the method `SpreadsheetReader({sheetName}).sheetDataAsJson()`
-    
+
   - Methods:
     - `sheetDataAsJson`: The `sheetDataAsJson` method transforms a table from a given sheet into a beautiful JSON valid object. It's normal to get emotional after running it.
   - How to Use It:
     ```js
-    > let sheet = new SpreadsheetReader('myAmazingSheet')
+    > const sheet = new SpreadsheetReader('myAmazingSheet')
     > sheet.sheetDataAsJson()
     > console.log(sheet.dataAsJson)
     [
-      { keyOne: 'valueFromCellA2', keyTwo: 'valueFromCellB2', keyThree: 'valueFromCellC2' },
-      { keyOne: 'valueFromCellA3', keyTwo: 'valueFromCellB3', keyThree: 'valueFromCellC3' },
-      { keyOne: 'valueFromCellA4', keyTwo: 'valueFromCellB4', keyThree: 'valueFromCellC4' }
+      { '1_cellA1': 'cellA2Value', '2_cellA2': 'cellB2Value' },
+      { '1_cellA1': 'cellA3Value', '2_cellA2': 'cellB3Value' },
+      { '1_cellA1': 'cellA4Value', '2_cellA2': 'cellB4Value' }
     ]
     ```
 

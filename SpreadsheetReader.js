@@ -50,9 +50,9 @@
      * > sheet.sheetDataAsJson()
      * > console.log(sheet.dataAsJson)
      * [
-     *  { '1_cellA1': 'cellA2Value', '2_cellA1': 'cellB2Value' },
-     *  { '1_cellA1': 'cellA3Value', '2_cellA1': 'cellB3Value' },
-     *  { '1_cellA1': 'cellA4Value', '2_cellA1': 'cellB4Value' }
+     *  { '1_cellA1': 'cellA2Value', '2_cellA2': 'cellB2Value' },
+     *  { '1_cellA1': 'cellA3Value', '2_cellA2': 'cellB3Value' },
+     *  { '1_cellA1': 'cellA4Value', '2_cellA2': 'cellB4Value' }
      * ]
      * ```
      *
