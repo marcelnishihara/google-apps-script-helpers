@@ -1,10 +1,10 @@
 /**
- * @class SpreadsheetReader
+ * @class GoogleSheets
  * @author Marcel Nishihara <marcelnishihara+github@gmail.com>
  * @see {@link https://github.com/marcelnishihara/google_apps_script GitHub}
  * @see {@link https://developers.google.com/apps-script Google Apps Script}
  */
- class SpreadsheetReader {
+ class GoogleSheets {
     /**
      * An easy-to-use class to help developers read Google Sheets
      * file data from a given spreadsheet ID and sheet name in
@@ -13,13 +13,13 @@
      * Usually, the Google Sheets file ID can be extracted from the
      * file URL, it is a bunch of characters between
      * `https://docs.google.com/spreadsheets/d/` and `/edit#gid=0`.
-     * When omitted, the `SpreadsheetReader` will try to read the 
+     * When omitted, the `GoogleSheets` will try to read the 
      * active spreadsheed.
      * 
      * The sheet name it is pretty self explained and it can be reached
      * in the sheets menu at the bottom of the Google Sheets window.
      * 
-     * @class SpreadsheetReader
+     * @class GoogleSheets
      * @param {string} sheetName Sheet name to be read.
      * @param {string} [spreadsheetId] Google Sheet File ID.
      */
@@ -46,7 +46,7 @@
      * 
      * Here's an example:
      * ```
-     * > const sheet = new SpreadsheetReader('myAmazingSheet')
+     * > const sheet = new GoogleSheets('myAmazingSheet')
      * > sheet.sheetDataAsJson()
      * > console.log(sheet.dataAsJson)
      * [

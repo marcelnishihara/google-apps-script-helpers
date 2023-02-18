@@ -1,4 +1,4 @@
-# Google Apps Script
+# Google Apps Script Helpers
 
 It is a compilation of classes, functions, and tips to help developers' 
 routines easier when they working with Google Apps Script from Google 
@@ -27,9 +27,23 @@ Workspace (formerly G Suite).
         > console.log(dT)
         '2023-02-01-07h30min00s'
         ```
+    - `logIntoFile`: An amazing `static` method to create a Google 
+    Drive file from given content, file name, folder ID where you 
+    want it to be saved, and MIME type.
+      - How to Use It:
+        ```js
+        > const todayIs = GoogleAppsScript.datetimeFormatted()
+        > const createLogFile = GoogleAppsScript.logIntoFile(
+        >  'Hello, World!', 
+        >  DriveApp.createFolder('myAmazingFolder').getId(), 
+        >  `my_log_file_${todayIs}`,
+        >  MimeType.RTF)
+        > console.log(createLogFile.success)
+        true
+        ```
 
 
-- `SpreadsheetReader`:
+- `GoogleSheets`:
   - Description: An easy-to-use class to help developers read Google 
   Sheets file data from a given spreadsheet ID and sheet name in Google 
   Apps Script context (Google Workspace).
@@ -40,7 +54,7 @@ Workspace (formerly G Suite).
     `SpreadsheetApp.openById({spreadsheetId})`;
     - `sheetByName`: Sheet name to be read;
     - `dataAsJson`: Property that will recieve data in the method 
-    `SpreadsheetReader({sheetName}).sheetDataAsJson()`.
+    `GoogleSheets({sheetName}).sheetDataAsJson()`.
 
   - Methods:
     - `sheetDataAsJson`: The `sheetDataAsJson` method transforms a
@@ -48,7 +62,7 @@ Workspace (formerly G Suite).
     It's normal to get emotional after running it.
       - How to Use It:
         ```js
-        > const sheet = new SpreadsheetReader('myAmazingSheet')
+        > const sheet = new GoogleSheets('myAmazingSheet')
         > sheet.sheetDataAsJson()
         > console.log(sheet.dataAsJson)
         [
