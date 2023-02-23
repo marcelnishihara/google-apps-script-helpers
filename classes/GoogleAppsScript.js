@@ -11,7 +11,6 @@ class GoogleAppsScript {
      * 
      * @class GoogleAppsScript
      */
-
     constructor() {
 
     }
@@ -95,18 +94,18 @@ class GoogleAppsScript {
      * ```
      * @function logIntoFile
      * 
-     * @param {*} contentToLog Anything you want to be logged because
+     * @param {*} [contentToLog] Anything you want to be logged because
      * of reasons.
      * 
-     * @param {string} folderId Folder ID where the file will be saved.
+     * @param {string} [folderId] Folder ID where the file will be saved.
      * If ommited, the file will be saved into your Google Drive root
      * folder.
      * 
-     * @param {string} logFileName The file name that you want to 
+     * @param {string} [logFileName] The file name that you want to 
      * create without its extension. If ommited, your file will be
      * named as `logFile`.
      * 
-     * @param {string} mimeType Log file MIME type. If ommited, the
+     * @param {string} [mimeType] Log file MIME type. If ommited, the
      * default value is `application/json`.
      * 
      * @returns {object}

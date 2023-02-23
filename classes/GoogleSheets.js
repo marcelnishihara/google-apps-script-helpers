@@ -23,7 +23,6 @@
      * @param {string} sheetName Sheet name to be read.
      * @param {string} [spreadsheetId] Google Sheet File ID.
      */
-
     constructor(
       sheetName, 
       spreadsheetId = SpreadsheetApp.getActiveSpreadsheet().getId()) {
