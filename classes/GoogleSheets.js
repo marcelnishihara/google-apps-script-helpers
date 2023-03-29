@@ -63,10 +63,10 @@
       let sheetData = this.sheetByName.getDataRange().getValues()
       let ignoreHeader = indexOfHeader + 1
 
-      sheetData.slice(ignoreHeader).forEach(function (row) {
+      for (let row of sheetData.slice(ignoreHeader)) {
         let rowAsObject = new Object()
 
-        row.forEach(function (cell, cellIndex) {
+        for (const [cellIndex, cell] of row.entries()) {
           let objectKey = sheetData[indexOfHeader][cellIndex]
           .toString()
           .toLowerCase()
@@ -74,10 +74,10 @@
 
           if (cell instanceof Date) { cell = cell.toISOString() }
           rowAsObject[`${cellIndex}_${objectKey}`] = cell
-        })
+        }
 
         this.dataAsJson.push(rowAsObject)
 
-      })
+      }
     }
   }
